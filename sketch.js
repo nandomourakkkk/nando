@@ -35,7 +35,7 @@ pontinho=loadSound('checkPoint.mp3')
 
 function setup(){
   
-  createCanvas(windowWitdh,windowHeight);
+  createCanvas(windowWidth,windowHeight);
   chaoinvisivel = createSprite(width/2,height-10,width,125);
   dino = createSprite(50,height-70,20,50);
   chao = createSprite(50,190,600,10);
