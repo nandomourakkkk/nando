@@ -35,9 +35,9 @@ pontinho=loadSound('checkPoint.mp3')
 
 function setup(){
   
-  createCanvas(600,200);
-  chaoinvisivel = createSprite(50,200,50,10);
-  dino = createSprite(50,160,20,50);
+  createCanvas(windowWitdh,windowHeight);
+  chaoinvisivel = createSprite(width/2,height-10,width,125);
+  dino = createSprite(50,height-70,20,50);
   chao = createSprite(50,190,600,10);
   gameover = createSprite(250,100,20,20)
   bolotaa = createSprite(250,130,10,10)
@@ -59,9 +59,10 @@ function draw(){
  } 
   if(modoJogo===PLAY){
   //o dino pula na posicao certa ;-;
-  if (keyDown('space')&& dino.y>=75){
+  if (touches.length>0||keyDown('space')&& dino.y>=75){
   dino.velocityY=-8
   sapateado.play();
+  touches=[]
   }
   gerarcacto();
   gerarnuvem(); 
